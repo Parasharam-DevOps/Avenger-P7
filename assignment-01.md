@@ -6,7 +6,8 @@ UserManager:
 1. Create a group:
    
    ansible server1 -m group -a "name=team1"
-    ![image](https://github.com/parsugit/ansible_practice/assets/132131379/1ecdfb9f-f9e4-4fb1-8097-4f1bb860d670)
+   
+![image](https://github.com/parsugit/ansible_practice/assets/132131379/1ecdfb9f-f9e4-4fb1-8097-4f1bb860d670)
 
    
 
@@ -49,31 +50,31 @@ Additional Features:
 Change user Shell -
 
     ansible server1 -m user -a "name=Nitish shell=/bin/bash" -b
-    ![image](https://github.com/parsugit/ansible_practice/assets/132131379/c92102be-1033-4a6b-88dd-72f45382bbb1)
+ ![image](https://github.com/parsugit/ansible_practice/assets/132131379/c92102be-1033-4a6b-88dd-72f45382bbb1)
 
 
 Change user password -
 
     ansible server1 -m user -a "name=Nitish password='{{ '12345' | password_hash('sha512') }}'" -b
-    ![image](https://github.com/parsugit/ansible_practice/assets/132131379/fca4c1a5-ff90-4eb3-9b84-aff8e0a1b3c1)
+ ![image](https://github.com/parsugit/ansible_practice/assets/132131379/fca4c1a5-ff90-4eb3-9b84-aff8e0a1b3c1)
 
 
 Delete user -
 
     ansible server1 -m user -a "name=Nitish state=absent remove=true " -b
-    ![image](https://github.com/parsugit/ansible_practice/assets/132131379/75c6e16e-026c-46e6-9438-ea3b880d06f2)
+ ![image](https://github.com/parsugit/ansible_practice/assets/132131379/75c6e16e-026c-46e6-9438-ea3b880d06f2)
 
 
 Delete Group - 
 
     ansible server1 -m group -a "name=team1 state=absent " -b
-    ![image](https://github.com/parsugit/ansible_practice/assets/132131379/87145cfa-43ff-489f-8883-aec2693e30d3)
+   ![image](https://github.com/parsugit/ansible_practice/assets/132131379/87145cfa-43ff-489f-8883-aec2693e30d3)
 
 List user or Team - 
 
     ansible server1 -m shell -a "getent group" -b
-    ![image](https://github.com/parsugit/ansible_practice/assets/132131379/544d3cf9-9081-48a7-a710-f32432a34832)
+   ![image](https://github.com/parsugit/ansible_practice/assets/132131379/544d3cf9-9081-48a7-a710-f32432a34832)
 
     
     ansible server1 -m shell -a "getent passwd" -b
-    ![image](https://github.com/parsugit/ansible_practice/assets/132131379/55193641-8f73-4778-bb41-a75db8abcd92)
+   ![image](https://github.com/parsugit/ansible_practice/assets/132131379/55193641-8f73-4778-bb41-a75db8abcd92)
