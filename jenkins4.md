@@ -38,24 +38,24 @@ pipeline {
         stage('Parallel Phase') {
             parallel {
                 stage('Code Stability') {
-                    when { expression { params.skip_test != false } }
+                    when { expression { params.skip_test != true } }
                     steps {
                         echo "Testing code stability"
                         sh 'mvn test'
                     }
                 }
                 stage('Code Quality Analysis') {
-                    when { expression { params.skip_test != false } }
+                    when { expression { params.skip_test != true } }
                     steps {
                         echo "Check code quality using PMD"
                         sh 'mvn pmd:pmd'
                     }
                 }
                 stage('Code Coverage Analysis') {
-                    when { expression { params.skip_test != false } }
+                    when { expression { params.skip_test != true } }
                     steps {
                         echo "Check code coverage analysis using Jacoco"
-                        sh 'mvn clean verify'
+                        //sh 'mvn clean verify'
                         jacoco()
                     }
                 }
@@ -95,3 +95,6 @@ pipeline {
         }
     }
 }
+
+![Screenshot from 2023-10-23 14-09-30](https://github.com/parsugit/ansible_practice/assets/132131379/1054324a-821c-4b00-b715-e1b60882e99f)
+
