@@ -13,14 +13,20 @@ Topics Covered:  (Configuring Agents, Various Methods, Distributing Loads, Execu
         Configure a Windows node using method of your choice
         - Download one sample application of .NET and build it on Windows Node.
 
-Method - via ssh
-create workspace folder
-sudo apt install openjdk-11-jre
-mkdir /home/ubuntu/workspace/
 
 ## Set-up Ubuntu Node
 
+su - jenkins and copy the id_rsa.pub ssh key of into user in ubuntu authorized keys 
 
+Download this file and create workspace folder and install java for Command line connection
+
+sudo apt install openjdk-11-jre
+
+mkdir /home/ubuntu/workspace/
+
+take public ip of node server then paste master public key in ubuntu server
+
+sudo wget http://18.144.27.234:8080/jnlpJars/slave.jar This public Ip is jenkins master server not a ubuntu server 
 
 
 #### Configuration
@@ -41,14 +47,17 @@ mkdir /home/ubuntu/workspace/
 
 
 
-Download this file and create workspace folder and install java for Command line connection
-sudo yum install java-11-openjdk-devel
-mkdir /home/ec2-user/workspace/
-take public ip of node server then paste master public key in redhat server
-sudo wget http://18.144.27.234:8080/jnlpJars/slave.jar
+
 
 ## Set-up RHEL Node
 
+Method - via ssh
+
+create workspace folder
+
+sudo yum install java-11-openjdk-devel
+
+mkdir /home/ubuntu/workspace/
 
 #### Configuration 
 
