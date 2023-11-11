@@ -1,3 +1,6 @@
+Debug variables 
+grep -E "(seeds:|listen_address:|rpc_address:|endpoint_snitch:)|^seeds:" /etc/cassandra/cassandra.yaml
+
 # Server1: Update cassandra.yaml
 # SSH into Server1
 ssh -i "ashish.pem" ubuntu@ec2-52-53-179-171.us-west-1.compute.amazonaws.com
