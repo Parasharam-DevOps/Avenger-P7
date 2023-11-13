@@ -11,14 +11,36 @@ Create 2 vpc networks with min requirements
 2 private subnet (service vpc)
 1 database private subnet (service vpc)
 1 middleware private subnet (service vpc)
-![image](https://github.com/parsugit/ansible_practice/assets/132131379/6976703c-c853-4f7e-ba64-e5ca8c57f98f)
 
 
-Create in such a way that both vpc networks can communicate with each other. Then setup nginx in service vpc under private subnet and use another nginx as a reverse proxy which can forward traffic from load balancer to nginx web hosting.
+**Middleware VPC**
+
+![image](https://github.com/parsugit/ansible_practice/assets/132131379/5b9f8061-1b2c-4860-818f-2c5d2720e1a9)
+
+**Service VPC**
+
+![image](https://github.com/parsugit/ansible_practice/assets/132131379/1fb60519-8946-4a9b-867f-d3afdcb3ec7f)
+
+**VPC Peering**
+
 ![image](https://github.com/parsugit/ansible_practice/assets/132131379/7e014200-4a0e-47f7-a19f-601076a66a7b)
 
 
+Create in such a way that both vpc networks can communicate with each other. Then setup nginx in service vpc under private subnet and use another nginx as a reverse proxy which can forward traffic from load balancer to nginx web hosting.
+
+**Load Balancer**
+![image](https://github.com/parsugit/ansible_practice/assets/132131379/5835bc6d-a9d7-4e18-89d5-f8199badefb6)
+
+
+
+
+
 """Client has another concern about security of the network, as not all resources should be allowed to each resource, so kindly restrict the rest of the traffic in route tables and Nacl".
+
+**Output**
+
+![image](https://github.com/parsugit/ansible_practice/assets/132131379/d77a3a93-202b-4f16-af1c-02f0d2e1b2de)
+
 
 Day2:
 You need to manage 
