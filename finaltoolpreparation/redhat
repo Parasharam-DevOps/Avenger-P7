@@ -10,30 +10,39 @@
     cassandra_repo_url: "https://redhat.cassandra.apache.org/41x/"
     cassandra_repo_key_url: "https://downloads.apache.org/cassandra/KEYS"
     cassandra_version: "4.1.3"
-    cassandra_seeds: "172.31.4.145"
-    cassandra_listen_address: "172.31.4.145"
-    cassandra_rpc_address: "172.31.4.145"
+    cassandra_seeds: "172.31.6.187"
+    cassandra_listen_address: "172.31.6.187"
+    cassandra_rpc_address: "172.31.6.187"
     cassandra_endpoint_snitch: "RackInferringSnitch"
     cassandra_jvm_opts:
       - "-Dcassandra.ignore_dc=true"
       - "-Dcassandra.ignore_rack=true"
 
   tasks:
+
+    # - name: Update package index
+    #   command: "sudo yum update -y"
     - name: Update package list and install prerequisites
       yum:
         name: "@Development Tools"
         state: present
 
-    - name: Run yum update
-      yum:
-        name: '*'
-        state: latest
-      tags: update_packages
-
     - name: Install Python 3
       yum:
         name: python3
         state: present
+
+    - name: Install pip3
+      package:
+        name: python3-pip
+        state: present
+      tags: install_pip3
+
+    - name: Install cqlsh
+      pip:
+        name: cqlsh
+        executable: pip3
+      tags: install_cqlsh
 
     - name: Install Java
       package:
@@ -78,14 +87,13 @@
     - name: Copy Cassandra configuration template
       template:
         src: /home/parsu/ansible/cassandra.yaml.j2
-        dest: /etc/cassandra/cassandra.yaml
+        dest: /etc/cassandra/default.conf/cassandra.yaml
       notify: Restart Cassandra
 
     - name: Debug variables
       debug:
         var: "{{ item }}"
       with_items:
-        - cluster_name
         - cassandra_seeds
         - cassandra_listen_address
         - cassandra_rpc_address
