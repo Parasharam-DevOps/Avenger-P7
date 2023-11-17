@@ -2,7 +2,7 @@ Debug variables
 grep -E "(seeds:|listen_address:|rpc_address:|endpoint_snitch:)|^seeds:" /etc/cassandra/conf/cassandra.yaml
 
 sudo yum update -y
-sudo yum groupinstall -y "Development Tools"
+sudo yum install -y "Development Tools"
 sudo yum install -y python3 python3-pip
 pip3 install cqlsh
 sudo yum install -y java-11-openjdk-devel
