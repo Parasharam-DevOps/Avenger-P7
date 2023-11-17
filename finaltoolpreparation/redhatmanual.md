@@ -25,7 +25,7 @@ sudo yum install -y cassandra-4.1.3
 ssh -i "ashish.pem" ubuntu@ec2-52-53-179-171.us-west-1.compute.amazonaws.com
 
 # Edit cassandra.yaml
-sudo vim /etc/cassandra/default.conf/cassandra.yaml
+sudo vim /etc/cassandra/conf/cassandra.yaml
 
 # Add configurations
 listen_address: 172.31.5.42
@@ -34,7 +34,7 @@ rpc_address: 172.31.5.42
 endpoint_snitch: RackInferringSnitch
 
 # Update cassandra-env.sh
-sudo vim /etc/cassandra/default.conf/cassandra-env.sh
+sudo vim /etc/cassandra/conf/cassandra-env.sh
 
 # Add JVM Options
 JVM_OPTS="$JVM_OPTS -Dcassandra.ignore_dc=true"
@@ -45,7 +45,7 @@ JVM_OPTS="$JVM_OPTS -Dcassandra.ignore_rack=true"
 ssh -i "ashish.pem" ubuntu@ec2-18-144-170-232.us-west-1.compute.amazonaws.com
 
 # Edit cassandra.yaml
-sudo vim /etc/cassandra/cassandra.yaml
+sudo vim /etc/cassandra/conf/cassandra.yaml
 
 # Add configurations
 listen_address: 172.31.4.246
@@ -54,7 +54,7 @@ rpc_address: 172.31.4.246
 endpoint_snitch: RackInferringSnitch
 
 # Update cassandra-env.sh
-sudo vim /etc/cassandra/default.conf/cassandra-env.sh
+sudo vim /etc/cassandra/conf/cassandra-env.sh
 
 # Add JVM Options
 JVM_OPTS="$JVM_OPTS -Dcassandra.ignore_dc=true"
