@@ -1,5 +1,5 @@
 Debug variables 
-grep -E "(seeds:|listen_address:|rpc_address:|endpoint_snitch:)|^seeds:" /etc/cassandra/default.conf/cassandra.yaml
+grep -E "(seeds:|listen_address:|rpc_address:|endpoint_snitch:)|^seeds:" /etc/cassandra/conf/cassandra.yaml
 
 sudo yum update -y
 sudo yum groupinstall -y "Development Tools"
