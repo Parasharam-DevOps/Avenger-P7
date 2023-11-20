@@ -39,6 +39,12 @@ Management ---> Service
 ![image](https://github.com/parsugit/ansible_practice/assets/132131379/63b139d9-9b36-40e5-a27b-8e48266c3a22)
 
 
+
+**Load Balancer**
+
+![image](https://github.com/parsugit/ansible_practice/assets/132131379/5835bc6d-a9d7-4e18-89d5-f8199badefb6)
+
+
 Then setup nginx in service vpc under private subnet and use another nginx as a reverse proxy which can forward traffic from load balancer to nginx web hosting.
 
 Private Server Config
@@ -68,12 +74,7 @@ location / {
 }
 }
 
-**Load Balancer**
-![image](https://github.com/parsugit/ansible_practice/assets/132131379/5835bc6d-a9d7-4e18-89d5-f8199badefb6)
 
-
-
-"""Client has another concern about security of the network, as not all resources should be allowed to each resource, so kindly restrict the rest of the traffic in route tables and Nacl".
 
 **Output**
 
