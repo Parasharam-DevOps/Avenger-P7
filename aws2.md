@@ -23,15 +23,46 @@ Create 2 vpc networks with min requirements
 
 **VPC Peering**
 
+Create in such a way that both vpc networks can communicate with each other. 
+
 ![image](https://github.com/parsugit/ansible_practice/assets/132131379/7e014200-4a0e-47f7-a19f-601076a66a7b)
 
+**Output**
+Service ---> Management
+![image](https://github.com/parsugit/ansible_practice/assets/132131379/805d94f1-4063-4619-8ad6-65e9e5f04575)
 
-Create in such a way that both vpc networks can communicate with each other. Then setup nginx in service vpc under private subnet and use another nginx as a reverse proxy which can forward traffic from load balancer to nginx web hosting.
+Management ---> Service
+![image](https://github.com/parsugit/ansible_practice/assets/132131379/63b139d9-9b36-40e5-a27b-8e48266c3a22)
+
+Then setup nginx in service vpc under private subnet and use another nginx as a reverse proxy which can forward traffic from load balancer to nginx web hosting.
+
+Private Server Config
+server {
+  listen 80;
+  server_name example.com;
+
+  location / {
+      proxy_pass http://backend-server-1;
+  }
+
+  location /app2/ {
+      proxy_pass http://backend-server-2;
+  }
+}
+
+Middleware nginx config:
+root@ip-10-0-140-62:/etc/nginx/sites-enabled# cat default
+
+server {
+listen 80;
+server_name localhost;
+location / {
+    proxy_pass http://10.0.28.86;
+}
+}
 
 **Load Balancer**
 ![image](https://github.com/parsugit/ansible_practice/assets/132131379/5835bc6d-a9d7-4e18-89d5-f8199badefb6)
-
-
 
 
 
@@ -49,21 +80,9 @@ Also manage Nacl group in such a way that it should allow traffic on specific po
 
 """While you are doing work on instance, some how your key 🗝️ is lost somewhere or currupted, client raising this issue as p0 and ask us for recover the key or kindly setup new key so that they can login the server atleast."""
 
-Day3:
-Kindly find the possible ways through which we can login to the server , you can do this 
-Either by volume mounting
-Either by doing configuration changes through user data.
-Or by creating your own server key as temporary key to login there.
+**To resolve this issue i refered this blog: And relaunch new ec2 using existing instance AMI**
 
-Kindly perform all three one by one and analyse the result.
-
-NOTE: 
-All traffic should be blocked only specific ports and IP addresses should be allowed.
-No secret and access keys, only roles and policy
-No root login. 
-
-GOOD TO DO: 
-If above part is done then only perform this scenario. CloudFront can cache objects and serve them directly to users (viewers), reducing the load on your Application Load Balancer. CloudFront can also help to reduce latency and even absorb some distributed denial of service (DDoS) attacks. So if you need these benefits with less load on LB and basic ddos protection kindly attach cloudfront network in front of load balancer on http traffic forwarding.
+https://www.quora.com/How-can-you-recover-the-keys-of-an-EC2-instance
 
 
 
@@ -77,75 +96,4 @@ If above part is done then only perform this scenario. CloudFront can cache obje
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-+------------------------------------+
-|          Management VPC            |
-|                                    |
-|  +--------------------------+      |
-|  | Public Subnet (10.0.0.0/24)|      |
-|  |   - Security Group (SG1)  |      |
-|  |      - Allow SSH (22)      |      |
-|  +--------------------------+      |
-|  +--------------------------+      |
-|  | Private Subnet (10.0.1.0/24)|     |
-|  |   - Security Group (SG2)  |      |
-|  |      - Deny All Traffic   |      |
-|  +--------------------------+      |
-+------------------------------------+
-                 |
-                 |
-                 V
-+------------------------------------+
-|           Service VPC              |
-|                                    |
-|  +--------------------------+      |
-|  | Public Subnet (10.1.0.0/24)|      |
-|  |   - Security Group (SG3)  |      |
-|  |      - Allow HTTP (80)     |      |
-|  +--------------------------+      |
-|  +--------------------------+      |
-|  | Private Subnet 1 (10.1.1.0/24)|   |
-|  |   - Security Group (SG4)  |      |
-|  |      - Allow Traffic from SG3|  |
-|  +--------------------------+      |
-|  +--------------------------+      |
-|  | Private Subnet 2 (10.1.2.0/24)|   |
-|  |   - Security Group (SG5)  |      |
-|  |      - Allow Traffic from SG3|  |
-|  +--------------------------+      |
-|  +--------------------------+      |
-|  | Database Subnet (10.1.3.0/24)|    |
-|  |   - Security Group (SG6)  |      |
-|  |      - Allow Database Port|      |
-|  +--------------------------+      |
-|  +--------------------------+      |
-|  | Middleware Subnet (10.1.4.0/24)|  |
-|  |   - Security Group (SG7)  |      |
-|  |      - Allow Traffic from SG3|  |
-|  +--------------------------+      |
-+------------------------------------+
-
-Flow of Traffic:
-1. External users access the public subnet of the Service VPC (SG3 allows HTTP traffic).
-2. Nginx installed in the public subnet forwards requests to the appropriate private subnets based on the request type.
-3. Private Subnets 1, 2, and Middleware Subnet have their respective Nginx instances handling specific application logic.
-4. Database Subnet contains the database server accessible only from the specific application subnets (SG6 allows database port traffic).
-
-Proxying:
-- The Nginx instance in the public subnet acts as a reverse proxy, directing requests to the appropriate backend Nginx servers in private subnets based on the request type.
-- Security Groups (SG4, SG5, SG7) allow traffic only from the public subnet (SG3), ensuring proper communication between the proxy and backend servers.
-
-Note: 
-- Security groups and NACLs are not detailed fully for brevity. In a real setup, you'd define specific rules for incoming and outgoing traffic for each component.
-- The specific configurations for Nginx, load balancing, and application logic are not included in this representation but would be essential for the setup.
 
