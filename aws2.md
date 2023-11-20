@@ -28,15 +28,21 @@ Create in such a way that both vpc networks can communicate with each other.
 ![image](https://github.com/parsugit/ansible_practice/assets/132131379/7e014200-4a0e-47f7-a19f-601076a66a7b)
 
 **Output**
+
 Service ---> Management
+
 ![image](https://github.com/parsugit/ansible_practice/assets/132131379/805d94f1-4063-4619-8ad6-65e9e5f04575)
 
+
 Management ---> Service
+
 ![image](https://github.com/parsugit/ansible_practice/assets/132131379/63b139d9-9b36-40e5-a27b-8e48266c3a22)
+
 
 Then setup nginx in service vpc under private subnet and use another nginx as a reverse proxy which can forward traffic from load balancer to nginx web hosting.
 
 Private Server Config
+
 server {
   listen 80;
   server_name example.com;
@@ -51,6 +57,7 @@ server {
 }
 
 Middleware nginx config:
+
 root@ip-10-0-140-62:/etc/nginx/sites-enabled# cat default
 
 server {
