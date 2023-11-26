@@ -34,6 +34,11 @@ Day 2: """Client has told you about the change in it's Nginx as he needs this to
 
 - You need to create a frontend including images in nginx page which will be fetched directly from S3 bucket.
 
+**Output:**
+
+![image](https://github.com/parsugit/ansible_practice/assets/132131379/a1cccb23-7c1b-4b4e-9f0e-515f7aff266d)
+
+
 Day3:
 """Now client has again told us to test it continuously to see if ASG is working or not if my server got unhealthy.""" 
 
@@ -69,6 +74,11 @@ You have told him yes, it is possible with path-based routing in the ALB. Now do
     - ALB should only be accessible though your public IP none else.
     - create listener rule so that {YOUR-ALB-DNS-NAME}/ninja1 should display welcome page of first ec2.
     - create listener rule so that {YOUR-ALB-DNS-NAME}/ninja2 should display welcome page of second ec2.
+
+  ![image](https://github.com/parsugit/ansible_practice/assets/132131379/af73dd6b-338b-4eb4-9993-e8ee82ef9a30)
+  ![image](https://github.com/parsugit/ansible_practice/assets/132131379/ba8490b5-7291-4aad-a828-2215c59848a5)
+
+
 
 ## Push all the updated images of the webpage to S3 bucket defined folders through any EC2 instance and maintain repo on that server only.
 
