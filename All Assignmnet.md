@@ -1,5 +1,7 @@
+
+**      ///////       ---------------------------------- Terraform Assignments  -----------------------------------------       ////////**
 =============
-Terraform Assingment-5
+**Terraform Assingment-5**
 =============
 
 ## Category
@@ -53,7 +55,7 @@ https://www.terraform.io/docs
 Deepak
 @channel
 =============
-Terraform Assingment-4
+**Terraform Assingment-4**
 =============
 ## Infrastructure as a Code
 ### Task Description 
@@ -79,10 +81,10 @@ Terraform Assingment-4
 
 **Note: Make maximum use of variables and output files**
 
-
+**      ///////       ---------------------------------- AWS -----------------------------------------       ////////**
  
 Ishaan Ambashta
-Assignment-03
+**aws Assignment-03**
 Hi @channel  here is your 3rd assignment :slightly_smiling_face:
 :alert:  :alert:  :alert:
 # You need to work on your tool cloud infrastructure design w.r.t 
@@ -102,7 +104,7 @@ Kindly validate your design by your buddy and then start the implementation.
 
  
 Ishaan Ambashta
-Assignment-02
+**aws Assignment-02**
 @channel here is your 2nd Assignment :slightly_smiling_face: Good Luck :ninja:
 :alert: :alert: :alert:
 """Suppose client has a new requirement of setup service in one network and setup its management in another network. Client needs a setup of nginx as a web page hosting, but he has an issue as he needs a basic cache system + who can handle the requests smoothly + manages the requests according + need a middleware layer which helps them easily debug the service issue. So he called DevOps."""
@@ -151,7 +153,7 @@ If above part is done then only perform this scenario. CloudFront can cache obje
 
  
 Ishaan Ambashta
-AWS Assignment -2 @channel
+**AWS Assignment -2**
 @channel here is your 1st Assignment :slightly_smiling_face: Good Luck :ninja:
 :alert: :alert: :alert:
 """Suppose your client has infrastructure running over the AWS cloud, but for the past few days, the client application has not been able to handle enough traffic and load, so he is thinking of setting up any reverse proxy for handling the load as middleware. He called you from the DevOps team and explained the problem statement. You have explained very well about the plan and design that you are going to perform.""" 
@@ -243,24 +245,23 @@ DevOps told him that it needs to be validated through a trust relationship in th
 
  
 Himanshi Parnami
-AWS Task -4 @channel
+**AWS Task -5 ** 
 Create a S3 bucket and host a static website through S3 feature after that integrate cloudFront service with your S3 bucket to overcome the latency and then access your static website through cloudFront url. Now change the content and hit again remember cache will not be taken at that time
 Nov 5th at 2:00 PM
 
 
- 
-AWS Task -3 @channel
+
+
+**AWS Task -4 **
 @channel  Task :
 You need to create a bucket and try to versioning the objects inside the bucket and analyse the result. Once you made the bucket it'll only be accessible from your IAM user and after uploading the object just remove the write access, then try to dowload and upload the object and analyse the result.
 
 Avoid giving * permission in policy.
-(edited)
-Nov 5th at 1:54 PM
 
 
- 
-Himanshi Parnami
-@channel AWS-CLI task:
+
+** 
+AWS-CLI task- 3**
 Create a Instance inside VPC network if already exist if not then make whole infrastructure with the help of aws-cli tool
 
 Perform operations below through aws-cli:
@@ -276,11 +277,8 @@ Good to do , If above implemented then implement this by aws-acli with single cl
 
 
 
+** AWS Task -2**
 
-
-
- AWS Task -2 @channel
-Ishaan Ambashta
 @channel this is your ASG task :slightly_smiling_face:
 Create an infrastructure with the following resources or use existing resources: 
   - VPC 
@@ -296,8 +294,7 @@ Try to complete your ASG and LB task by today.
 
 
  
-Ishaan Ambashta
-AWS Task -1 @channel
+**AWS Task -1 @channel**
 You have to setup vpc network in your cloud and configure the following:
  - 1 VPC 
  - 1 public subnet 
@@ -308,9 +305,9 @@ You have to setup vpc network in your cloud and configure the following:
 perform the task with required configs and analyse the LB behaviour
 
 
- 
+ **      ///////       ---------------------------------- Jenkins Assignments  -----------------------------------------       ////////**
 
-Jenkins Assignment 6:
+**Jenkins Assignment 6:**
 "Create a Ansible shared library in Jenkins for your tool with following steps:
 - clone
 - User Approval
@@ -331,7 +328,7 @@ Oct 27th at 9:55 AM
 
  
 
-"Jenkin Assignment 5:
+**"Jenkin Assignment 5:**
 Topics Covered:  (User Authentication, User Authorization)
      Assignment on Authentication and Authorization
         Their is an organization which has 3 teams
@@ -376,7 +373,7 @@ Topics Covered:  (User Authentication, User Authorization)
 
  
 
-Assignment 4:
+ ** Jenkins Assignment 4:**
 Create a Declarative CI pipeline for java based project that contains various stages like
 Code checkout
 Run below stages in parallel
@@ -411,7 +408,7 @@ Oct 22nd at 12:30 PM
 
  
 
-Jenkins Assignment 3:
+**Jenkins Assignment 3:**
 Topics Covered:  (Configuring Agents, Various Methods, Distributing Loads, Executors, Assigning Nodes)
      Assignment on configuring Nodes
         Configure a Ubuntu node using execution of command on the master method. 
@@ -429,9 +426,8 @@ Oct 20th at 9:50 AM
 
 
  
-Mukul
-@here
-Jenkins Assignment 2:
+
+**Jenkins Assignment 2:**
 Topics Covered: (Shell Scripting, Git, Freestyle Job, Paramteters, Upstream/Downstream, Slack + Email Notification)
     Part 1:-
       Create a Jenkins job via which you will be able to perform below operations & if        any of the step fails a Slack and Email notification should be sent:
@@ -463,7 +459,7 @@ Step 2: Deploy Jenkins Master in remote server Using Ansible Role
 
  
 
-Jenkins Task
+**Jenkins Task**
 What you will do:
 
 In this lab we will explore how we can add & configure agent:
@@ -475,16 +471,16 @@ Ensure that if Jenkins job would be run between 9am-6pm then only it should be e
 Add another EC2 agent which should create a server when a Jenkins job needs to be executed.
 Oct 15th at 4:50 PM
 
-
+**      ///////       ---------------------------------- Ansible Assignments  -----------------------------------------       ////////**
  
 
-Ansible Assignment-5
+**Ansible Assignment-5**
 Role on the assigned tool with following features: - Should be able to install version specific - Should be OS independent - COnfiguration should be variablelized - Try using jinja template - It should include Templates for the configuration files with all the dynamic value that needs to be updated. - It should include handlers ,but not along with the task. - User should have the options to execute the role on centos or ubuntu or together on both.
 
 
 
 
-Assignment-4
+** Ansible Assignment-4**
 Create a System manager ansible role with below feature
 
 I should be able to manage softwares that needs to be installed
@@ -497,7 +493,8 @@ Think of other system specific settings that you should manage
 
  
 
-Ansile Assignment-3
+**Ansile Assignment-3**
+
 Setup an entire infra using ansible playbook on aws
 Setup Spring3HibernateApp (https://github.com/opstree/spring3hibernate) on created infra using ansible playbook by following the below steps:
 Install MySQL
@@ -515,7 +512,7 @@ Website
 
  
 
-Ansible Assignment-2
+**Ansible Assignment-2**
 
 Install nginx in your servers(more then 2) and make sure the log files of nginx should not be granted more than 1 GB space on the nodes
 Create equal number of websites as per your team  members and every members website should be hosted for only 2 hours and after every 2 hours another website should start displaying.
@@ -532,7 +529,8 @@ Also Configure nginx to run as reverse proxy to apache after completing first po
 
  
 
-ANSIBLE ASSIGNMENT-1
+**ANSIBLE ASSIGNMENT-1**
+
 Complete the following steps with the help of ansible modules:
 
 UserManager:
@@ -553,7 +551,7 @@ List user or Team
 
 
 
-   ///////       ---------------------------------- Linux/Maven/git Assignments  -----------------------------------------       ////////
+**      ///////       ---------------------------------- Linux / Maven / git Assignments  -----------------------------------------       ////////**
 
 # Assignment 8
 Create a utility to manage build operations of a maven based java project such as:
