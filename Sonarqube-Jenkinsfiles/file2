@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    environment {
+        SCANNER_HOME = tool 'sonar-scanner'
+    }
+    tools {
+        jdk 'jdk17'
+        maven 'mvn'
+        // Add Sonar Scanner tool configuration if not already configured in Jenkins Global Configuration
+        // sonar 'sonar-scanner'
+    }
+    stages {
+        stage("Git Checkout") {
+            steps {
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/jaiswaladi246/Petclinic.git'
+            }
+        }
+        stage("mvn clean package") {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+       stage("Sonarqube Analysis") {
+    steps {
+        withSonarQubeEnv('sonar-scanner') {
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Petclinic \
+                    -Dsonar.projectKey=Petclinic -Dsonar.java.binaries=.  '''
+                }
+
+          }
+       }
+    }
+ }
