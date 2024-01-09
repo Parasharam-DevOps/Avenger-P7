@@ -1,4 +1,8 @@
-Installation & Config file Details Of ScyllaDB
+Installation Of Redis
+https://redis.io/docs/install/install-redis/install-redis-on-windows/
+
+Installation of Redis
+https://opensource.docs.scylladb.com/stable/getting-started/install-scylla/install-on-linux.html
 
 Must Open two port  ScyllaDB - 9042 Redis- 6379
 
