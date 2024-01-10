@@ -51,12 +51,26 @@ Run cqlsh:
 
 Getting Started
 
-Creating a Keyspace
+1.Creating a Keyspace & Table In Scylla
 
-    Create KEYSPACE In ScyllaDB CREATE KEYSPACE IF NOT EXISTS employee_db WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+    CREATE KEYSPACE IF NOT EXISTS employee_db
+      WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+      
+2.To see keyspace run the below command
 
-Creating Table Under the Keyspace 
+    DESCRIBE KEYSPACES;
 
-    EXISTS employee_info ( id text, name text, designation text, department text, joining_date date, address text, office_location text, status text, email text, phone_number text, PRIMARY KEY (id, joining_date) ) WITH CLUSTERING ORDER BY (joining_date DESC);
+  
+3.Create table under the employee_db KEYSPACE
 
+     CREATE TABLE IF NOT EXISTS employee_info (
+        id text, name text, designation text, department text,
+        joining_date date, address text, office_location text,
+        status text, email text, phone_number text,
+        PRIMARY KEY (id, joining_date)
+    ) WITH CLUSTERING ORDER BY (joining_date DESC);
+  
+2.To see table run the below command
+
+    DESCRIBE TABLES;
     
