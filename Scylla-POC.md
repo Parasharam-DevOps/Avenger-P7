@@ -14,3 +14,38 @@
     sudo apt-get update
     
     sudo apt-get install -y scylla
+    
+3.Configure and Run ScyllaDB
+
+1.Configure the following parameters in the /etc/scylla/scylla.yaml configuration file.
+
+    seeds - The IP address of the first node. Other nodes will use it as the first contact point to discover the cluster topology when joining the cluster.
+
+    listen_address - The IP address that ScyllaDB uses to connect to other nodes in the cluster.
+
+    rpc_address - The IP address of the interface for client connections (Thrift, CQL).
+
+2.Run the scylla_setup script to tune the system settings and determine the optimal configuration.
+
+    sudo scylla_setup
+
+The script invokes a set of scripts to configure several operating system settings; for example, it sets RAID0 and XFS filesystem.
+
+The script runs a short (up to a few minutes) benchmark on your storage and generates the /etc/scylla.d/io.conf configuration file. When the file is ready, you can start ScyllaDB. ScyllaDB will not run without XFS or io.conf file
+
+3.Run ScyllaDB as a service (if not already running)
+
+    sudo systemctl start scylla-server
+
+Now you can start using ScyllaDB. Here are some tools you may find useful.
+
+Run nodetool:
+
+The Blog I Refered : https://opensource.docs.scylladb.com/stable/getting-started/install-scylla/install-on-linux.html
+
+    nodetool status
+
+Run cqlsh:
+
+    cqlsh
+
