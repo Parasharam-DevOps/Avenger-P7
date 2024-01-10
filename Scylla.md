@@ -62,6 +62,11 @@ Getting Started
 
   
 3.Create table under the employee_db KEYSPACE
+Select keyspace
+
+    USE employee_db;
+    
+Create Table 
 
      CREATE TABLE IF NOT EXISTS employee_info (
         id text, name text, designation text, department text,
@@ -73,4 +78,6 @@ Getting Started
 2.To see table run the below command
 
     DESCRIBE TABLES;
+
+    SELECT * FROM employee_info ;
     
