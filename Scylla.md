@@ -3,7 +3,7 @@
 
 |   Author     |  Created on   |  Version   | Last updated by | Last edited on |
 | ------------ | --------------| -----------|---------------- | -------------- |
-| Parasharam Desai | 10 Jan 2024   |     v1     | Vikram Bisht    | Vikram Bisht   |
+| Parasharam Desai | 18 Jan 2024   |     v1     | Parasharam Desai    | Parasharam Desai   |
 
 ---
 
