@@ -197,10 +197,11 @@ These commands allow you to create, remove, and inspect keyspaces in the ScyllaD
 # Conclusion
 
 The ScyllaDB Manual Setup Guide provides a comprehensive walkthrough for installing, configuring, and initializing ScyllaDB on Ubuntu 22.04.3 LTS Ensure to follow each step carefully to set up your ScyllaDB environment successfully.
+
 # References
-	
-|  Source                  |                Description | 
-| ------------------------ |----------------------------|
-| https://opensource.docs.scylladb.com/stable/getting-started/install-scylla/install-on-linux.html | ScyllaDB, Installation Guide |
-|(https://www.scylladb.com/download/?platform=ubuntu-22.04&version=scylla-5.2#open-source) | ScyllaDB Configuration Guide |
-| https://github.com/OT-MICROSERVICES/documentation-template/wiki/Software-Template                | Document format followed from this link     |
+
+| Source                                                                                     | Description                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| [ScyllaDB Installation Guide](https://opensource.docs.scylladb.com/stable/getting-started/install-scylla/install-on-linux.html) | Comprehensive guide for installing ScyllaDB on Linux. |
+| [ScyllaDB Configuration Guide](https://www.scylladb.com/download/?platform=ubuntu-22.04&version=scylla-5.2#open-source) | Step-by-step instructions for configuring ScyllaDB. |
+| [Documentation Template](https://github.com/OT-MICROSERVICES/documentation-template/wiki/Software-Template) | Format inspiration for the document obtained from this repository. |
