@@ -1,9 +1,8 @@
 # Manual Setup of ScyllaDb
 
-
 |   Author     |  Created on   |  Version   | Last updated by | Last edited on |
 | ------------ | --------------| -----------|---------------- | -------------- |
-| Parasharam Desai | 18 Jan 2024   |     v1     | Parasharam Desai    | Parasharam Desai   |
+| Parasharam Desai | 18 Jan 2024   |     Version-1     | Parasharam Desai    | 18 Jan 2024   |
 
 ---
 
