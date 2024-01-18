@@ -1,8 +1,8 @@
 # Manual Setup of Redis
 
-|   Author        |  Created on   |  Version   | Last updated by  | Last edited on |
-| --------------- | --------------| -----------|----------------- | -------------- |
-| Parasharam Desai |  09 Jan 2024  |  Version 1 | Khushi Malhotra  | 11 Jan 2024    |
+|   Author     |  Created on   |  Version   | Last updated by | Last edited on |
+| ------------ | --------------| -----------|---------------- | -------------- |
+| Parasharam Desai | 18 Jan 2024   |     Version-1     | Parasharam Desai    | 18 Jan 2024   |
 
 
 # Introduction
