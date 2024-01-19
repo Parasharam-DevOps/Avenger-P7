@@ -113,7 +113,7 @@ In essence, the Feature Branch Workflow is a valuable tool for code quality and 
 
 |    Name    | Email Address |
 | -----------| --------------|
-| Parasharam | parasharam.desai.snaatak@mygurukulam.co |
+| **[Parasharam Desai](https://github.com/Parasharam-Desai)** | parasharam.desai.snaatak@mygurukulam.co |
 
 ---
 ## Resources and References
