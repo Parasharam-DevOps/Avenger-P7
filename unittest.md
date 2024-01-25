@@ -48,7 +48,7 @@ Manual unit testing involves developers manually executing test cases without th
 
 **Automated Unit Testing**
 
-Automated unit testing involves using testing frameworks and tools to automate the execution of test cases. This Below POC focuses on automated unit testing using JUnit, a popular Java testing framework.
+Automated unit testing involves using testing frameworks and tools to automate the execution of test cases. Below POC focuses on automated unit testing using JUnit, a popular Java testing framework.
 ***
 
 # Why is Unit Testing important?
@@ -67,19 +67,21 @@ Unit testing offers several benefits, including:
 
 There are various unit testing frameworks available for different programming languages. Some popular ones include:
 
-| #   | Tool                           | Official Link                                    | Open Source | Description                                                                                       |
-| --- | ------------------------------ | ------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
-| 1   | JUnit                          | [JUnit](https://junit.org/junit5/)               | Yes         | Open-source, widely used for Java, supports TDD (Test-Driven Development).                                                                           |
-| 2   | TestNG                         | [TestNG](https://testng.org/doc/index.html)      | Yes         | Flexible, parallel testing, highly configurable.                                                                  |
-| 3   | NUnit                          | [NUnit](https://nunit.org/)                      | Yes         | Popular for .NET, supports data-driven tests.                                                                            |
-| 4   | Unity Test Tools                | [Unity Test Tools](https://docs.unity3d.com/560/Documentation/Manual/testing-editortestsrunner.html) | No          | Essential for Unity game development, supports various test types.                                                        |
-| 5   | Microsoft Unit Testing Framework | [Microsoft Unit Testing Framework](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test) | Yes      | Integrated with Visual Studio, suitable for .NET development, supports data-driven testing.                                |
-| 6   | HtmlUnit                       | [HtmlUnit](http://htmlunit.sourceforge.net/)    | Yes         | GUI-less, supports JavaScript, commonly used with JUnit and TestNG for testing web applications.                  |
-| 7   | Parasoft                       | [Parasoft](https://www.parasoft.com/solutions/unit-testing/) | No          | Proprietary tool for C and C++, offers static and dynamic analysis, comprehensive testing for large codebases.           |
-| 8   | Cantata                        | [Cantata](https://www.cantata-testing.com/)     | No          | Commercial testing framework, advanced productivity, widely used for unit and integration testing.        |
-| 9   | Karma                          | [Karma](https://karma-runner.github.io/)        | Yes         | Open-source, runs tests on real devices, supports easy debugging and CI/CD integration.                    |
-| 10  | pytest                | [pytest](https://docs.pytest.org/en/latest/)    | Yes        | Third-party library, concise syntax, user-friendly, good command-line support, extensible with plugins.        |
+| #   | Tool                           | Official Link                                    | Open Source | Supported Languages | Description                                                                                       |
+| --- | ------------------------------ | ------------------------------------------------- | ----------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| 1   | JUnit                          | [JUnit](https://junit.org/junit5/)               | Yes         | Java               | Open-source, widely used for Java, supports TDD (Test-Driven Development).                                                                           |
+| 2   | TestNG                         | [TestNG](https://testng.org/doc/index.html)      | Yes         | Java               | Flexible, parallel testing, highly configurable.                                                                  |
+| 3   | NUnit                          | [NUnit](https://nunit.org/)                      | Yes         | .NET               | Popular for .NET, supports data-driven tests.                                                                            |
+| 4   | Unity Test Tools                | [Unity Test Tools](https://docs.unity3d.com/560/Documentation/Manual/testing-editortestsrunner.html) | No          | Unity (C#)          | Essential for Unity game development, supports various test types.                                                        |
+| 5   | Microsoft Unit Testing Framework | [Microsoft Unit Testing Framework](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test) | Yes      | .NET               | Integrated with Visual Studio, suitable for .NET development, supports data-driven testing.                                |
+| 6   | HtmlUnit                       | [HtmlUnit](http://htmlunit.sourceforge.net/)    | Yes         | Java               | GUI-less, supports JavaScript, commonly used with JUnit and TestNG for testing web applications.                  |
+| 7   | Parasoft                       | [Parasoft](https://www.parasoft.com/solutions/unit-testing/) | No          | C, C++              | Proprietary tool for C and C++, offers static and dynamic analysis, comprehensive testing for large codebases.           |
+| 8   | Cantata                        | [Cantata](https://www.cantata-testing.com/)     | No          | C, C++              | Commercial testing framework, advanced productivity, widely used for unit and integration testing.        |
+| 9   | Karma                          | [Karma](https://karma-runner.github.io/)        | Yes         | JavaScript         | Open-source, runs tests on real devices, supports easy debugging and CI/CD integration.                    |
+| 10  | pytest                | [pytest](https://docs.pytest.org/en/latest/)    | Yes        | Python             | Third-party library, concise syntax, user-friendly, good command-line support, extensible with plugins.        |
 
+
+***
 
 # Unit Testing Advantages
 
@@ -118,11 +120,14 @@ Java unit testing is often facilitated by testing frameworks, with JUnit being o
 
 The developer has already authored the unit test cases for the application.
 
-You can find these test cases located in the directory path: src/test/java/com/opstree/microservice/salary.
+You can find these test cases located in the directory path: 
+
+	src/test/java/com/opstree/microservice/salary.
 
 JUnit, a testing framework, plays a pivotal role in enabling Java unit testing within this context.
 
 	Repository Link: [OT-MICROSERVICES](https://github.com/OT-MICROSERVICES/salary-api.git)
+ 
 
 ![image](https://github.com/Parasharam-DevOps/Avenger-P7/assets/132131379/e4437f15-a559-43a4-9367-eb7aecca1f78)
 
@@ -157,7 +162,7 @@ As the salary code is Java-based, it is designed to be compatible with Java vers
 
 ![image](https://github.com/Parasharam-DevOps/Avenger-P7/assets/132131379/4c12c52e-dcba-48bd-aa1f-94a94c42dfdf)
 
-## Add the JUnit dependency in pom.xml file.
+### Add the JUnit dependency in pom.xml file.
 
 	<dependency>
 		<groupId>junit</groupId>
@@ -196,14 +201,22 @@ Address compatibility issue with JUnit by uncommenting and updating surefire plu
 
 ![image](https://github.com/Parasharam-DevOps/Avenger-P7/assets/132131379/7bd0ec27-bffe-48c2-ac85-8f4a93bbfe75)
 
-![image](https://github.com/Parasharam-DevOps/Avenger-P7/assets/132131379/53847503-a743-4fa3-ae59-d42d5ac4d6dc)
+![image](https://github.com/avengers-p7/Documentation/assets/156056709/6ac027a8-85e3-4b31-8ad1-8da93035cf82)
+
 
 ### Generate html report with surefire.
+This command will generate an html report. To access unit test report, navigate to the target > site > right-click > Open in Browser.
 
 	mvn surefire-report:report
  
+
+![image](https://github.com/avengers-p7/Documentation/assets/156056709/486dbecd-8438-4367-a5b3-ab123ac27a3a)
+![image](https://github.com/avengers-p7/Documentation/assets/156056709/39df6f1b-f373-4db4-9cdf-f904c1c544ba)
+![image](https://github.com/avengers-p7/Documentation/assets/156056709/de771f0f-419e-4ab9-ae3b-643d8282b271)
+
+ 
 ### POC Conclusion
-This command will generate an html report. To access unit test report, navigate to the target > site > right-click > Open in Browser.
+
 In conclusion, Java unit testing is an essential practice in software development that ensures code quality, reliability, and maintainability. By following best practices, such as using a reliable testing framework like JUnit, writing isolated and independent test cases, and automating test execution with tools like Maven and Gradle, developers can efficiently validate individual units of code. Additionally, adopting test-driven development (TDD) methodologies and regularly generating and reviewing test reports promotes the creation of robust, error-free software. Java unit testing serves as a foundation for building high-quality applications and is crucial in identifying and addressing issues early in the development process, ultimately improving the overall software development lifecycle.  
 
 ***
@@ -248,4 +261,3 @@ Choose a tool that aligns with your project's requirements and the preferences o
 | Advantage & disadvantage                                | [Definition of Unit Testing](https://www.techtarget.com/searchsoftwarequality/definition/unit-testing) |
 | Unit Testing Best Practices                              | [Unit Testing Best Practices](https://www.softwaretestinghelp.com/unit-testing-best-practices/) |
 | JUnit – Generating HTML Reports                            | [JUnit – Generating HTML Reports](https://howtodoinjava.com/junit5/junit-html-report/) |
-
