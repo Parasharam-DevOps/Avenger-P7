@@ -41,7 +41,9 @@ Please ensure you have access to an AWS account for deployment purposes in addit
 
 ***
 # Flow Diagram:
-![image](https://github.com/avengers-p7/Documentation/assets/156056709/9e6a4ced-3182-40a9-b772-2ac7021a436c)
+
+![image](https://github.com/Parasharam-DevOps/snaatak-p7-repo/assets/132131379/e0439d45-c191-4ecf-b137-9faa991c63ed)
+
 
 
 ***
