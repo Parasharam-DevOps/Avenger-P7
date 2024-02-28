@@ -197,9 +197,6 @@ ansible-playbook scylla-playbook.yml
 
 During output evaluation, utilize the register and debug modules to verify the playbook's functionality.
 
-![image](https://github.com/avengers-p7/Documentation/assets/156056709/e097d239-e38e-4973-b936-8658c16072cb)
-
-![image](https://github.com/avengers-p7/Documentation/assets/156056709/459a0f88-2955-4d28-9467-69596386e5bc)
 
 ***
 # Conclusion
