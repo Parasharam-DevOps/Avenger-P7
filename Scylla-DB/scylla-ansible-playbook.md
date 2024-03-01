@@ -41,8 +41,9 @@ Please ensure you have access to an AWS account for deployment purposes in addit
 
 ***
 # Flow Diagram:
+![image](https://github.com/Parasharam-DevOps/snaatak-p7-repo/assets/132131379/730785e4-cb83-48e1-981d-db0643dbe9c7)
 
-![image](https://github.com/Parasharam-DevOps/snaatak-p7-repo/assets/132131379/e0439d45-c191-4ecf-b137-9faa991c63ed)
+
 
 
 
@@ -57,8 +58,8 @@ Defines inventory settings, and SSH configurations.
 
 ```ini
 [defaults]
-inventory               =       /home/parsu/ansible/aws_ec2.yaml
-private_key_file        =       /home/parsu/Downloads/snaatak.pem
+inventory               =       ./aws_ec2.yaml
+private_key_file        =       ./snaatak.pem
 remote_user             =       ubuntu
 host_key_checking       =       False
 
