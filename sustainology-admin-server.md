@@ -148,6 +148,17 @@ WantedBy=multi-user.target
 
 
 
+---
+# Build File Path
+
+`sustainology-admin-web +  sustainology-web ------>    build inside .next dir`
+
+# Reference DOC
+|     Link   |
+|------------|
+|    [File structure of node.js and Express application](https://medium.com/@abhijeetgurle/file-structure-of-node-js-and-express-application-4d9fb66c8d68)     |
+
+
 
 
 
