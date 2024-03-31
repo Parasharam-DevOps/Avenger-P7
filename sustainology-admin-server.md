@@ -1,4 +1,4 @@
-# sustainology-web.md
+# sustainology-web Frontend
 
     sudo apt update 
     npm install 
@@ -28,7 +28,7 @@ http://20.244.100.78:7008 Sustainology-web Frontend
 
 ----
 
-# sustainology-admin-web.md
+# sustainology-admin-web.Frontend
 
     sudo apt update 
     npm install 
@@ -57,6 +57,7 @@ http://20.244.100.78:4000 Sustainology-admin-Server Backend
 # Service Files
 
 ## sustainology-admin-server.service
+
     
     sudo vim /etc/systemd/system/sustainology-admin-server.service
     
@@ -66,20 +67,24 @@ http://20.244.100.78:4000 Sustainology-admin-Server Backend
         
     sudo systemctl start sustainology-admin-server
 
-`
+```shell
 [Unit]
+
 Description=Sustainology Admin Server
 After=network.target
 
 [Service]
+
 User=ubuntu
 WorkingDirectory=/home/ubuntu/sustainology-admin-server
 ExecStart=npm start
 Restart=always
 
 [Install]
+
 WantedBy=multi-user.target
-`
+
+```
 
 ---
 
@@ -93,7 +98,7 @@ WantedBy=multi-user.target
       
       sudo systemctl start sustainology-admin-web
 
-`
+```shell
 [Unit]
 Description=Sustainology Admin Web
 After=network.target
@@ -106,7 +111,7 @@ Restart=always
 
 [Install]
 WantedBy=multi-user.target
-`
+```
 
 ---
 
@@ -120,7 +125,8 @@ WantedBy=multi-user.target
     
     sudo systemctl start sustainology-web
 
-`
+```shell
+
 [Unit]
 Description=Sustainology Web
 After=network.target
@@ -134,7 +140,7 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 
-`
+```
 
 # Service File Status
 
