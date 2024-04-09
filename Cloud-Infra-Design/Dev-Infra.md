@@ -32,14 +32,8 @@ The Cloud Infra Design Dev documentation provides an in-depth overview of the de
 ***
 # Infrastructure Diagram
 
-**Ideal Infra**
+![PRODUCTION](https://github.com/Parasharam-DevOps/snaatak-p7-repo/assets/132131379/7de6b554-9241-4210-9955-e954ede5dbad)
 
-![Ideal-Dev-Infra - Page 1 (3)](https://github.com/CodeOps-Hub/Documentation/assets/156056709/6fc6484e-0265-4544-a538-03361df0531c)
-
-
-**Require Infra**
-
-![Ideal-Dev-Infra - Page 1 (1)](https://github.com/CodeOps-Hub/Documentation/assets/156056709/708faa1b-5dfa-487d-8143-dc56a68e659a)
 
 
 ---
